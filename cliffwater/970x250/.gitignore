@@ -1,0 +1,15 @@
+node_modules
+storybook-static
+build
+aws.yml
+npm-debug.log
+.DS_Store
+tmp/
+coverage/
+.vscode/
+/helpers/config.js
+
+/src/generated/*.json
+
+build-storybook.log
+.idea

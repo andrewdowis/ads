@@ -1,0 +1,16 @@
+@import "./styles/fonts.scss";
+
+body {
+  background-color: cyan;
+
+  color: red;
+
+  #header-copy {
+    font-family: "Verlag";
+    font-weight: 350;
+  }
+  #header-copy2 {
+    font-family: "Verlag";
+    font-weight: 450;
+  }
+}
