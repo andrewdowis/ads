@@ -10,6 +10,9 @@ coverage/
 /helpers/config.js
 
 /src/generated/*.json
+/dist
+**/dist/*
+**/_assets/**
 
 build-storybook.log
 .idea

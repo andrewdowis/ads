@@ -7,8 +7,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "index": "cp ./src/index.html ./dist/index.html",
-    "build": "npm run index ; webpack --config webpack.prod.js",
-    "start": "webpack --config webpack.prod.js ; webpack serve --open --config webpack.dev.js"
+    "build": "webpack --config webpack.prod.js ; npm run index",
+    "start": "webpack serve --open --config webpack.dev.js"
   },
   "author": "Andrew Dowis, Hampar Productions",
   "devDependencies": {

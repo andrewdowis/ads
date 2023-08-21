@@ -7,11 +7,11 @@
     <title>Cliffwater - Ads</title>
 
     <script>
+      function handleClick() {
+        window.open("https://www.cliffwater.com/", "_blank")
+      }
+
       window.onload = function () {
-        console.log(
-          `%c LOADED`,
-          `color: white; background-color: red; font-style: italic; padding: 0px; margin-left: 0px;`
-        )
         CliffWater.init()
       }
     </script>
@@ -20,13 +20,14 @@
         padding: 0;
         margin: 0;
         border-width: 0px;
+        position: absolute;
       }
 
       .container {
-        border: 1px solid black;
+        cursor: pointer;
         height: 250px;
-        width: 920px;
-        background-color: blue;
+        width: 970px;
+        background-color: white;
         position: absolute;
         overflow: hidden;
 
@@ -57,12 +58,20 @@
   </head>
 
   <body>
-    <div class="container">
+    <div class="container" onclick="handleClick()">
       <div id="cliffwater-content">
-        <h2 id="header-copy">Header</h2>
-        <h2 id="header-copy2">Header</h2>
-        <p id="body-copy">this is the body</p>
-        <img id="puppy" src="./assets/images/test_puppy.png" />
+        <div id="background"></div>
+        <img id="book" src="./assets/images/books.png" />
+        <div class="copy-block" id="copy1">
+          <div class="header">Take a closer look<br />at how Private Debt<br />has evolved.</div>
+        </div>
+        <div class="copy-block" id="copy2">
+          <p id="edition">Second Edition</p>
+          <div class="header">Private Debt:<br />Yield, Safety and the Emergence<br />of Alternate Lending</div>
+          <p id="credit">Steve Nesbitt, Cliffwater CEO & Author</p>
+        </div>
+        <img id="logo" src="./assets/images/logo.svg" />
+        <div class="cta" id="cta">Learn More</div>
       </div>
       <div id="preloader">
         <img src="./assets/images/preloader.gif" />
