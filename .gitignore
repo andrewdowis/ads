@@ -11,8 +11,8 @@
 # production
 /build
 /build
-/dist
-**/dist/*
+/deploy
+**/deploy/*
 **/_assets/**
 
 # misc

@@ -1,4 +1,4 @@
-const { Power3, gsap } = require("gsap")
+const { Power1, Power3, gsap } = require("gsap")
 
 require("./main.scss")
 require("./assets/images/books.png")
@@ -36,7 +36,7 @@ function init() {
   // gsap.to(header, { x: "+=500", duration: 5 })
   gsap.from(copy1, { left: "100%", ease, duration: 1, delay })
   gsap.from(book, { x: -book.offsetWidth, ease, duration: 1, delay })
-  gsap.from(logo, { x: "+=10", alpha: 0, ease, duration: 1, delay: delay + 0.1 })
+  gsap.from(logo, { x: "+=10", alpha: 0, ease, duration: 1, delay: delay + 0.2 })
 
   delay += 2
   gsap.to(copy1, { alpha: 0, ease, duration: 0.5, delay })
@@ -46,6 +46,7 @@ function init() {
 
   const items = [edition, credit, cta]
   items.forEach(el => {
+    gsap.from(el, { x: "+=20", ease: Power1.easeOut, duration: 0.5, delay })
     gsap.from(el, { alpha: 0, ease, duration: 0.5, delay })
     delay += 0.1
   })

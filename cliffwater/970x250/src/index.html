@@ -11,8 +11,12 @@
         window.open("https://www.cliffwater.com/", "_blank")
       }
 
+      const start = new Date()
+
       window.onload = function () {
-        CliffWater.init()
+        const now = new Date()
+        const elapsed = Math.max(0, now - start)
+        setTimeout(CliffWater.init, 250 - elapsed)
       }
     </script>
     <style>
@@ -67,7 +71,9 @@
         </div>
         <div class="copy-block" id="copy2">
           <p id="edition">Second Edition</p>
-          <div class="header">Private Debt:<br />Yield, Safety and the Emergence<br />of Alternate Lending</div>
+          <div id="header2" class="header">
+            Private Debt:<br />Yield, Safety and the Emergence<br />of Alternate Lending
+          </div>
           <p id="credit">Steve Nesbitt, Cliffwater CEO & Author</p>
         </div>
         <img id="logo" src="./assets/images/logo.svg" />

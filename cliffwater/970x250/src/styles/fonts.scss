@@ -1,29 +1,20 @@
 @font-face {
-  font-family: "Verlag";
-  src: url("./assets/fonts/Verlag-Book.otf") format("opentype");
-  font-weight: 325;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Verlag";
-  src:
-    url("./assets/fonts/Verlag-Light.otf") format("opentype"),
-    url("./assets/fonts/Verlag-Light.ttf") format("truetype");
+  font-family: "FancierDisplay";
+  src: url("./assets/fonts/FinancierDisplay-Regular.otf") format("opentype");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Verlag";
-  src: url("./assets/fonts/Verlag-Bold.otf") format("opentype");
-  font-weight: 400;
-  font-style: normal;
+  font-family: "FancierDisplayI";
+  src: url("./assets/fonts/FinancierDisplay-RegularItalic.otf") format("opentype");
+  font-weight: 300;
+  font-style: italic;
 }
 
 @font-face {
-  font-family: "Verlag";
-  src: url("./assets/fonts/Verlag-Black.otf") format("opentype");
-  font-weight: 450;
+  font-family: "FancierDisplaySB";
+  src: url("./assets/fonts/FinancierDisplay-Semibold.otf") format("opentype");
+  font-weight: 400;
   font-style: normal;
 }
