@@ -1,110 +1,49 @@
-@import "./styles/fonts.scss";
-
 $navy: #1b284d;
 $blue: #0063ad;
 $blue-light: #51b2e9;
 $green: #32a39d;
 
 body {
-  color: white;
   #cliffwater-content {
-    #header-copy {
-      font-family: "Verlag";
-      font-weight: 350;
-    }
-    #header-copy2 {
-      font-family: "Verlag";
-      font-weight: 450;
-    }
-
-    #background {
+    .background {
       width: 100%;
       height: 100%;
       background: linear-gradient(90deg, $blue, $blue-light);
     }
 
-    .copy-block {
-      & > * {
-        white-space: nowrap;
-      }
-
-      .header {
-        font-size: 52px;
-        font-family: "FancierDisplaySB";
-      }
-      p {
-        font-size: 22px;
-      }
+    .copyContainer {
+      overflow: hidden;
     }
 
     .cta {
       background-color: white;
       display: flex;
+      border-radius: 3px;
       align-items: center;
       justify-content: center;
-      color: $navy;
-      border: 1px solid white;
-      transition:
-        color 0.1s ease-out,
-        background-color 0.1s ease-out;
-    }
 
-    &:hover {
-      .cta {
-        color: white;
+      transition: background-color 0.1s ease-out;
+
+      .ctaLight,
+      .ctaDark {
+        transition: opacity 0.1s ease-out;
+      }
+
+      .ctaLight {
+        opacity: 0;
+      }
+
+      &:hover {
         background-color: $navy;
+
+        .ctaLight {
+          opacity: 1;
+        }
+
+        .ctaDark {
+          opacity: 0;
+        }
       }
-    }
-
-    // POSITIONING AND SIZING
-    //
-    #copy1,
-    #copy2 {
-      left: 260px;
-
-      #edition {
-        font-family: "FancierDisplay";
-        top: 10px;
-      }
-
-      #header2 {
-        top: 36px;
-      }
-
-      #credit {
-        font-family: "FancierDisplayI";
-        font-style: italic;
-        top: 163px;
-      }
-    }
-
-    #copy1 {
-      top: 53px;
-      .header {
-        line-height: 0.96em;
-        letter-spacing: 0.01em;
-      }
-    }
-
-    #copy2 {
-      .header {
-        line-height: 0.77em;
-      }
-    }
-
-    #logo {
-      width: 131px;
-      height: 19px;
-      left: 818px;
-      top: 203px;
-    }
-
-    .cta {
-      width: 122px;
-      height: 33px;
-      left: 258px;
-      top: 203px;
-      font-size: 22px;
     }
   }
 }

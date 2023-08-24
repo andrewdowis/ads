@@ -41,13 +41,13 @@ module.exports = {
           "sass-loader",
         ],
       },
-      {
-        test: /.(ttf|otf|eot|woff(2)?)(\?[a-z0-9]+)?$/,
-        type: "asset/resource",
-        generator: {
-          filename: "assets/fonts/[name][ext]",
-        },
-      },
+      // {
+      //   test: /.(ttf|otf|eot|woff(2)?)(\?[a-z0-9]+)?$/,
+      //   type: "asset/resource",
+      //   generator: {
+      //     filename: "assets/fonts/[name][ext]",
+      //   },
+      // },
     ],
   },
   plugins: [
