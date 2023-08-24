@@ -26,10 +26,9 @@ function init() {
   let imageLoads = 0
   function onImageLoad() {
     if (++imageLoads === 8) {
-      cta.parentNode.appendChild(cta)
       preloader.parentNode.removeChild(preloader)
 
-      gsap.set(copy2Container, { x: 260, y: 37, width: copy2Img.width, height: copy2Img.height })
+      gsap.set(copy2Container, { width: copy2Img.width, height: copy2Img.height })
 
       let delay = 0.25
       const ease = Power3.easeOut
@@ -37,9 +36,9 @@ function init() {
 
       gsap.to(content, { alpha: 1, ease, duration: delay })
       // // gsap.to(header, { x: "+=500", duration: 5 })
-      gsap.from(copy1Img, { left: "100%", ease, duration: 1, delay })
+      gsap.from(copy1Img, { x: -copy1Img.width, ease, duration: 1, delay })
 
-      gsap.from(bookImg, { x: -bookImg.offsetWidth, ease, duration: 1, delay })
+      gsap.from(bookImg, { x: 728, ease, duration: 1, delay })
       gsap.from(logoImg, { x: "+=10", alpha: 0, ease, duration: 1, delay: delay + 0.2 })
 
       delay += 2
@@ -61,18 +60,17 @@ function init() {
     }
   }
 
-  const bookImg = new Image2(books, content, onImageLoad)
-  const copy1Img = new Image2(copy1, content, onImageLoad, { x: 260, y: 60 })
-  const editionImg = new Image2(edition, content, onImageLoad, { x: 260, y: 14 })
+  const bookImg = new Image2(books, content, onImageLoad, { x: 317 })
+  const copy1Img = new Image2(copy1, content, onImageLoad, { x: 9, y: 25 })
 
-  const copy2Container = new Div(content, "copyContainer")
-
+  const editionImg = new Image2(edition, content, onImageLoad, { x: 9, y: 10 })
+  const copy2Container = new Div(content, "copyContainer", { x: 9, y: 25 })
   const copy2Img = new Image2(copy2, copy2Container, onImageLoad)
+  const creditImg = new Image2(credit, content, onImageLoad, { x: 9, y: 71 })
 
-  const creditImg = new Image2(credit, content, onImageLoad, { x: 260, y: 166 })
-  const logoImg = new Image2(logo, content, onImageLoad, { x: 817, y: 210 })
+  const logoImg = new Image2(logo, content, onImageLoad, { x: 594, y: 66 })
 
-  const cta = new Div(content, "cta", { x: 268, y: 203, width: 126, height: 34 })
+  const cta = new Div(content, "cta", { x: 582, y: 28, width: 120, height: 25 })
 
   const learnMoreWhiteImg = new Image2(learn_more_white, cta, onImageLoad)
   learnMoreWhiteImg.classList = "ctaLight"
