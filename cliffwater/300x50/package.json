@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "index": "cp ./src/index.html ./deploy/300x50/index.html",
+    "index": "cp ./src/index.html ./deploy/300x50/index.html ; cp ./src/backup.jpg ./deploy/300x50/backup.jpg",
     "build": "webpack --config webpack.prod.js ; npm run index",
     "start": "webpack serve --open --config webpack.dev.js"
   },
