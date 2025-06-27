@@ -1,0 +1,14 @@
+{
+  "name": "Cliffwater Ads",
+  "version": "0.0.1",
+  "description": "Cliffwater HTML Ad Campaign",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "index": "cp ./src/index.html ../deploy/970x250_v1/index.html ; cp ./src/backup.jpg ../deploy/970x250_v1/backup.jpg",
+    "build": "webpack --config webpack.prod.js ; npm run index",
+    "start": "webpack serve --open --config webpack.dev.js"
+  },
+  "author": "Andrew Dowis, Hampar Productions"
+}

@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cliffwater - Ads</title>
+
+    <script>
+      function handleClick() {
+        window.clickTag =
+          "https://www.amazon.com/Private-Debt-Emergence-Alternative-Lending/dp/1119944392/ref=sr_1_1?crid=PYX60A87BQSG&keywords=private+debt+nesbitt&qid=1692813573&sprefix=private+debt%2Caps%2C288&sr=8-1"
+        window.open(window.clickTag, "_blank")
+      }
+
+      const start = new Date()
+
+      window.onerror = function () {
+        document.getElementById("backup").style.display = "inherit"
+        document.getElementById("cliffwater-content").style.display = "none"
+        document.getElementById("preloader").style.display = "none"
+      }
+
+      window.onload = function () {
+        const now = new Date()
+        const elapsed = Math.max(0, now - start)
+        setTimeout(CliffWater.init, 250 - elapsed)
+      }
+    </script>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        border-width: 0px;
+        position: absolute;
+      }
+
+      .container {
+        cursor: pointer;
+        height: 90px;
+        width: 728px;
+        background-color: white;
+        position: absolute;
+        overflow: hidden;
+
+        #preloader,
+        #cliffwater-content {
+          width: 100%;
+          height: 100%;
+          background-color: white;
+          position: absolute;
+        }
+
+        #cliffwater-content {
+          visibility: hidden;
+        }
+
+        #preloader {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        #preloader img {
+          width: 25px;
+          height: 25px;
+        }
+
+        #backup {
+          width: 100%;
+          height: 100%;
+          display: none;
+        }
+
+        .border {
+          box-sizing: border-box;
+          pointer-events: none;
+          user-select: none;
+
+          border: 1px black solid;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container" onclick="handleClick()">
+      <div id="cliffwater-content">
+        <div class="background"></div>
+      </div>
+      <div id="preloader">
+        <img src="./assets/images/preloader.gif" />
+      </div>
+      <img id="backup" src="./backup.jpg" />
+      <div class="border"></div>
+    </div>
+
+    <!-- load code -->
+    <link rel="stylesheet" href="./style/main.css" />
+    <script src="./js/bundle.js"></script>
+  </body>
+</html>
